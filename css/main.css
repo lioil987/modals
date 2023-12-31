@@ -1,0 +1,102 @@
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  direction: ltr;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+button.Btn {
+  cursor: pointer;
+  padding: 1rem 5rem;
+  background-color: rgb(158, 0, 0);
+  outline: none;
+  border: 2px solid rgb(158, 0, 0);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  color: rgb(255, 255, 255);
+  font-family: inherit;
+  font-size: 1.5rem;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  margin: 0 1rem;
+}
+button.Btn:hover {
+  background-color: rgb(223, 132, 132);
+  color: black;
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+}
+div.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*width and height are one hundred percent but it work Because 100% means the whole viewport*/
+  background-color: rgba(0, 0, 0, 0.575);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none; /*important*/
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+div.modal.show {
+  opacity: 1;
+  pointer-events: visible;
+}
+div.modal div.content {
+  background-color: white;
+  width: 50%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  max-width: 60rem;
+  min-width: 30rem;
+  min-height: 20rem;
+  max-height: 70%;
+  justify-content: space-between;
+  user-select: none;
+}
+div.modal div.content div.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.295);
+
+}
+div.modal div.content div.desc {
+  font-size: 1.2rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+div.modal div.content div.close button {
+  padding: 0.3rem 3rem;
+}
